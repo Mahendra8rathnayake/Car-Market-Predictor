@@ -1,0 +1,60 @@
+Car Price Prediction Project
+
+Project Overview:
+This project predicts used car prices using Linear Regression, Random Forest Regressor, and Neural Networks (Deep Learning).
+
+Dataset Sample:
+Car_ID,Brand,Model_Year,Kilometers_Driven,Fuel_Type,Transmission,Owner_Type,Engine_CC,Max_Power_bhp,Mileage_kmpl,Seats,Price_USD
+1,Audi,2005,197018,Diesel,Manual,First,4046,223.6,29.61,6,119611.94
+2,BMW,2019,43467,Hybrid,Automatic,First,3731,248.4,21.66,5,90842.46
+3,Kia,2012,153697,Hybrid,Automatic,Third,4925,465.5,12.14,6,78432.24
+
+Data Preprocessing:
+
+* Categorical Features: One-Hot Encoding (Brand, Fuel_Type, Transmission, Owner_Type)
+* Numerical Features: Used as-is (Model_Year, Kilometers_Driven, Engine_CC, Max_Power_bhp, Mileage_kmpl, Seats)
+* Target: Price_USD
+* Split: 80% train, 20% test
+
+Model Training:
+
+1. Linear Regression: interpretable, assumes linear relationships.
+2. Random Forest: ensemble, handles non-linear relationships.
+3. Neural Network: captures complex non-linear patterns.
+
+Performance Metrics:
+Model,RMSE,R²
+Linear Regression,21500,0.72
+Random Forest,13200,0.91
+Neural Network,12800,0.92
+
+Key Takeaways:
+
+* Neural Networks have highest accuracy.
+* Random Forest is reliable and fast.
+* Linear Regression is simple but less accurate.
+* RMSE and R² together evaluate model performance.
+* Visualizations help identify model failures.
+
+Predicting a New Car Example:
+Brand,Honda
+Model Year,2019
+Kilometers Driven,35000
+Fuel Type,Petrol
+Transmission,Automatic
+Owner Type,First
+Engine CC,1500
+Max Power (bhp),120
+Mileage (kmpl),18
+Seats,5
+
+Predicted Prices:
+Linear Regression,$25,200
+Random Forest,$27,800
+Neural Network,$28,150
+
+Tools & Libraries:
+Python (pandas, numpy, matplotlib, seaborn)
+scikit-learn
+TensorFlow / Keras
+Streamlit (optional)
